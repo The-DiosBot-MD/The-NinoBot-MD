@@ -21,12 +21,14 @@ let handler = async (m, { conn, usedPrefix, command, isAdmin, isBotAdmin }) => {
 };
 
 handler.before = async (m, { conn }) => {
-    if (mutedUsers.has(m.sender) && m.mtype !== 'stickerMessage') {
+    if (mutedUsers.has(m.sender)) {
         try {
             await conn.sendMessage(m.chat, { delete: m.key });
+            console.log(`Mensaje eliminado de usuario muteado: ${m.sender}`);
         } catch (e) {
-            console.error(e);
+            console.error('Error al eliminar mensaje:', e);
         }
+        return true; // Detiene el procesamiento del mensaje
     }
 };
 
@@ -35,6 +37,6 @@ handler.tags = ['group'];
 handler.command = ['mute', 'unmute'];
 handler.group = true;
 handler.botAdmin = true;
-handler.rowner = true
+handler.rowner = true;
 
 export default handler;
