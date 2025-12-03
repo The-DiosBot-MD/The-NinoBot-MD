@@ -34,7 +34,7 @@ global.textbot = '🍃 ɴɪɴᴏ ɴᴀᴋᴀɴᴏ-ɪᴀ ʙʏ ɢʟᴏʙᴀʟ sᴛ
 global.etiqueta = 'ᴄʟᴏʙᴀʟ-ɴᴋ'
 global.currency = "¥enes"
 global.banner = "https://cdn.russellxz.click/44289a68.jpg"
-global.icono = "https://qu.ax/XuhgM.jpg"
+global.icono = "https://qu.ax/Ewc9G"
 global.catalogo = fs.readFileSync('./lib/catalogo.jpg')
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
