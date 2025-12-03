@@ -95,9 +95,9 @@ const handler = async (m, { conn, args, usedPrefix, command }) => {
   }
 }
 
-handler.help = ['hd']
+handler.help = ['hd2']
 handler.tags = ['tools']
-handler.command = /^(hd)$/i
+handler.command = ['hd2']
 
 export default handler
 
