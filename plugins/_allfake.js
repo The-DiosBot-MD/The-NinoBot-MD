@@ -10,13 +10,15 @@ handler.all = async function (m) {
 global.canalIdM = [
   "120363403726798403@newsletter", 
   "120363403726798403@newsletter",
-  "120363425526390282@newsletter"
+  "120363425526390282@newsletter",
+  "120363404434164076@newsletter"
 ]
 
 global.canalNombreM = [
   "꒰  📚 𝑵𝒊𝒏𝒐 𝑵𝒂𝒌𝒂𝒏𝒐-𝑰𝑨 🌸 ꒱ • 𝑪𝒉𝒂𝒏𝒏𝒆𝒍 𝑶𝒇𝒊𝒄𝒊𝒂𝒍 🍒✨️", 
   "𝆺𝅥 𝆭 ִ ֗ 🍒 𝙏𝙝𝙚 𝙉𝙞𝙣𝙤 𝙉𝙖𝙠𝙖𝙣𝙤-𝙄𝘼 ┆ 𝘾𝙝𝙖𝙣𝙣𝙚𝙡 𝙊𝙛𝙞𝙘𝙞𝙖𝙡 ✨ ౨ৎ˚₊‧",
-  "𝗠𝗘𝗠𝗘𝗦 🧃➜ 𝗦𝗧𝗜𝗖𝗞𝗘𝗥 𝗘𝗗𝗜𝗧 𝗬 𝗠𝗔𝗦 💭"
+  "𝗠𝗘𝗠𝗘𝗦 🧃➜ 𝗦𝗧𝗜𝗖𝗞𝗘𝗥 𝗘𝗗𝗜𝗧 𝗬 𝗠𝗔𝗦 💭",
+  "𝐥𝐞𝐨 » 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 ❄️"
 ]
 
 global.channelRD = await getRandomChannel()
@@ -50,8 +52,8 @@ return list[Math.floor(Math.random() * list.length)]
 }
 
 async function getRandomChannel() {
-let randomIndex = Math.floor(Math.random() * canalIdM.length)
-let id = canalIdM[randomIndex]
-let name = canalNombreM[randomIndex]
+let randomIndex = Math.floor(Math.random() * global.canalIdM.length)
+let id = global.canalIdM[randomIndex]
+let name = global.canalNombreM[randomIndex]
 return { id, name }
 }
