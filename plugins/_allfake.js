@@ -7,8 +7,18 @@ const { generateWAMessageFromContent, prepareWAMessageMedia, proto } = pkg
 
 var handler = m => m
 handler.all = async function (m) { 
-global.canalIdM = ["120363403726798403@newsletter", "120363403726798403@newsletter"]
-global.canalNombreM = ["꒰  📚 𝑵𝒊𝒏𝒐 𝑵𝒂𝒌𝒂𝒏𝒐-𝑰𝑨 🌸 ꒱ • 𝑪𝒉𝒂𝒏𝒏𝒆𝒍 𝑶𝒇𝒊𝒄𝒊𝒂𝒍 🍒✨️", "𝆺𝅥 𝆭 ִ ֗ 🍒 𝙏𝙝𝙚 𝙉𝙞𝙣𝙤 𝙉𝙖𝙠𝙖𝙣𝙤-𝙄𝘼 ┆ 𝘾𝙝𝙖𝙣𝙣𝙚𝙡 𝙊𝙛𝙞𝙘𝙞𝙖𝙡 ✨ ౨ৎ˚₊‧"]
+global.canalIdM = [
+  "120363403726798403@newsletter", 
+  "120363403726798403@newsletter",
+  "120363425526390282@newsletter"
+]
+
+global.canalNombreM = [
+  "꒰  📚 𝑵𝒊𝒏𝒐 𝑵𝒂𝒌𝒂𝒏𝒐-𝑰𝑨 🌸 ꒱ • 𝑪𝒉𝒂𝒏𝒏𝒆𝒍 𝑶𝒇𝒊𝒄𝒊𝒂𝒍 🍒✨️", 
+  "𝆺𝅥 𝆭 ִ ֗ 🍒 𝙏𝙝𝙚 𝙉𝙞𝙣𝙤 𝙉𝙖𝙠𝙖𝙣𝙤-𝙄𝘼 ┆ 𝘾𝙝𝙖𝙣𝙣𝙚𝙡 𝙊𝙛𝙞𝙘𝙞𝙖𝙡 ✨ ౨ৎ˚₊‧",
+  "𝗠𝗘𝗠𝗘𝗦 🧃➜ 𝗦𝗧𝗜𝗖𝗞𝗘𝗥 𝗘𝗗𝗜𝗧 𝗬 𝗠𝗔𝗦 💭"
+]
+
 global.channelRD = await getRandomChannel()
 
 global.d = new Date(new Date + 3600000)
@@ -28,8 +38,8 @@ global.redes = [canal, comunidad, git, github, correo].getRandom()
 
 global.nombre = m.pushName || 'Anónimo'
 global.packsticker = `𝐍𝐢𝐧𝐨 🍒✨`
-  
-global.fkontak = { key: { participants:"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
+
+global.fkontak = { key: { participants:"0@s.whatsapp.net", remoteJid: "status@broadcast", fromMe: false, id: "Halo" }, message: { contactMessage: { vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, participant: "0@s.whatsapp.net" }
 global.rcanal = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: channelRD.id, serverMessageId: '', newsletterName: channelRD.name }, externalAdReply: { title: botname, body: dev, mediaUrl: null, description: null, previewType: "PHOTO", thumbnail: await (await fetch(icono)).buffer(), sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, mentionedJid: null }}
 }
 
