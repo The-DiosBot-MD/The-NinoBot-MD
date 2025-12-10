@@ -5,7 +5,7 @@ const handler = async (m, { conn }) => {
 
   const imageUrls = [
     'https://raw.githubusercontent.com/Kone457/Nexus/refs/heads/main/Ruta-(1)/A.png',
-    'https://qu.ax/fYNwJ.png'
+    'https://qu.ax/9uCfF'
   ];
 
   const randomUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
